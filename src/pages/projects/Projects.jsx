@@ -1,6 +1,6 @@
 import './style.css';
 
-const Home = ({ isDarkMode }) => {
+const Projects = ({ isDarkMode }) => {
     const pageStyle = {
         backgroundColor: isDarkMode ? '#1C1C1C' : '#E6E6FA',
         color: isDarkMode ? '#FFFFFF' : '#000000',
@@ -10,12 +10,13 @@ const Home = ({ isDarkMode }) => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-    };
-  
+      };
+
     return (
-      <div style={pageStyle}>
-        <span>Home</span>
-      </div>
+        <div style={pageStyle}>
+            <span>Projects</span>
+        </div>
     );
-  };
-export default Home;
+};
+
+export default Projects;
