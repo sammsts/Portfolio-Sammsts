@@ -30,5 +30,6 @@
   
   .nav-link:hover {
     background-color: #DDDDDD;
-    color: #333333;
+    background-color: transparent;
+    color: #817e7e;
   }
