@@ -2,17 +2,12 @@ import './style.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import BtnDarkMode from '../BtnDarkMode/BtnDarkMode';
 import { Link } from 'react-router-dom';
 
 function NavB({ isDarkMode, onDarkModeClick }) {
 
   const navbarStyle = {
     backgroundColor: '#483D8B',
-    color: '#FFFFFF',
-  };
-
-  const navTextStyle = {
     color: '#FFFFFF',
   };
 
