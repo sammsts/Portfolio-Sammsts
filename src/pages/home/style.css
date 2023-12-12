@@ -1,0 +1,62 @@
+body {
+    background: url('/public/background_page_dev.png');
+    background-size: cover;
+    min-height: '95vh';
+    display: 'flex';
+    justify-content: 'center';
+    position: relative;
+}
+
+/* github */
+.githubLink {
+    position: absolute;
+    margin-left: 26vh;
+    margin-top: 34vh;
+    text-decoration: none;
+}
+
+.githubText {
+    letter-spacing: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.githubText:hover {
+    text-decoration: underline;
+}
+
+/* gmail */
+.gmailLink {
+    position: absolute;
+    margin-left: 26vh;
+    margin-top: 45vh;
+    text-decoration: none;
+}
+
+.gmailText {
+    letter-spacing: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.gmailText:hover {
+    text-decoration: underline;
+}
+
+/* linkedin */
+.linkedinLink {
+    position: absolute;
+    margin-left: 26vh;
+    margin-top: 56vh;
+    text-decoration: none;
+}
+
+.linkedinText {
+    letter-spacing: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.linkedinText:hover {
+    text-decoration: underline;
+}

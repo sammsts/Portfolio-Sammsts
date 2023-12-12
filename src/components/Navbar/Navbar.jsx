@@ -25,13 +25,13 @@ function NavB({ isDarkMode, onDarkModeClick }) {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav variant="underline" defaultActiveKey="/home">
               <Link to="/" className="nav-link">Home</Link>
-              <Link to="/about" className="nav-link">About</Link>
-              <Link to="/projects" className="nav-link">Projects</Link>
+              {/* <Link to="/about" className="nav-link">About</Link>
+              <Link to="/projects" className="nav-link">Projects</Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
         <Navbar.Collapse className='justify-content-end'>
-          <BtnDarkMode isDarkMode={isDarkMode} onClick={onDarkModeClick} />
+          {/* <BtnDarkMode isDarkMode={isDarkMode} onClick={onDarkModeClick} /> */}
         </Navbar.Collapse>
       </Navbar>
     </div>
