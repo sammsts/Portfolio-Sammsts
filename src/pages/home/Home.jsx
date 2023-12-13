@@ -1,24 +1,36 @@
-import { Link } from 'react-router-dom';
+import './../../index.css';
 import './style.css';
+import { Link } from 'react-router-dom';
+import CarouselHomeDev from '../../components/Carousel/Carousel';
 
-const Home = ({ isDarkMode }) => {
-    const pageStyle = {
-        backgroundColor: isDarkMode ? '#1C1C1C' : '#E6E6FA',
-        color: isDarkMode ? '#FFFFFF' : '#000000',
-        transition: 'background-color 0.3s ease',
-    };
+const Home = () => {
   
     return (
-      <div style={pageStyle}>
-        <Link to='https://github.com/sammsts' target='_blank' className='githubLink'>
-          <h2 className='githubText'>sammsts</h2>
-        </Link>
-        <Link to='mailto:samuelmacielsts@gmail.com' target='_blank' className='gmailLink'>
-          <h2 className='gmailText'>samuelmacielsts@gmail.com</h2>
-        </Link>
-        <Link to='https://www.linkedin.com/in/samuelmacielsantos/' target='_blank' className='linkedinLink'>
-          <h2 className='linkedinText'>Samuel Maciel dos Santos</h2>
-        </Link>
+      <div>
+        <h1 className="title">Página em desenvolvimento</h1>
+        <div className="containerCode">
+          <CarouselHomeDev />
+        </div>
+        <div className="containerContact">
+          <div className="contactItem">
+            <img src="./github_logo.png" alt="GitHub Logo" className="logo" />
+            <Link to='https://github.com/sammsts' target='_blank' className='githubLink'>
+              <h2 className='logoText'>sammsts</h2>
+            </Link>
+          </div>
+          <div className="contactItem">
+            <img src="./gmail_logo.png" alt="Gmail Logo" className="logo" />
+            <Link to='mailto:samuelmacielsts@gmail.com' target='_blank' className='gmailLink'>
+              <h2 className='logoText'>samuelmacielsts@gmail.com</h2>
+            </Link>
+          </div>
+          <div className="contactItem">
+            <img src="./linkedin_logo.png" alt="LinkedIn Logo" className="logo" />
+            <Link to='https://www.linkedin.com/in/samuelmacielsantos/' target='_blank' className='linkedinLink'>
+              <h2 className='logoText'>Samuel Maciel dos Santos</h2>
+            </Link>
+          </div>
+        </div>
       </div>
     );
   };

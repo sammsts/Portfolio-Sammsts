@@ -1,35 +1,36 @@
 @keyframes typingAnimation {
-    from {
-      width: 0;
-    }
-    to {
-      width: 20.4%;
-    }
+  from {
+    width: 0;
   }
-  
-  .navbar-brand-typing {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    animation: typingAnimation 3s steps(40, end) 0s forwards;
-    animation-fill-mode: forwards;
-    color: #FFFFFF;
+  to {
+    width: 20.4%;
   }
-  
-  .navbar {
-    z-index: 1;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #FFFFFF;
-    transition: background-color color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    background-color: #DDDDDD;
-    background-color: transparent;
-    color: #817e7e;
-  }
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+}
+
+.navbar-brand-typing {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  animation: typingAnimation 3s steps(40, end) 0s forwards;
+  animation-fill-mode: forwards;
+  color: #FFFFFF;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  transition: background-color color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #DDDDDD;
+  background-color: transparent;
+  color: #817e7e;
+}

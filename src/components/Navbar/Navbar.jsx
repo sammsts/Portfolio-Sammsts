@@ -1,3 +1,4 @@
+import './../../index.css';
 import './style.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,11 +10,12 @@ function NavB({ isDarkMode, onDarkModeClick }) {
   const navbarStyle = {
     backgroundColor: '#483D8B',
     color: '#FFFFFF',
+    display: 'flex',
   };
 
   return (
     <div>
-      <Navbar expand="lg" style={navbarStyle}>
+      <Navbar collapseOnSelect expand="lg" style={navbarStyle}>
         <Container>
           <Navbar.Brand href="/" className='navbar-brand-typing'>{"<"}Samuel Maciel dos Santos{"/>"}</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

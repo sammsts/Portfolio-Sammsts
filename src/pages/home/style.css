@@ -1,62 +1,99 @@
 body {
-    background: url('/public/background_page_dev.png');
-    background-size: cover;
-    min-height: '95vh';
-    display: 'flex';
-    justify-content: 'center';
-    position: relative;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 70%, #7028ff 100%);
+}
+
+.title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.containerContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 5vw;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+}
+
+.logo:hover {
+    opacity: 1
+}
+
+.logoText {
+    letter-spacing: 3px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    word-break: break-all;
+}
+
+.logoText:hover {
+    text-decoration: underline;
+}
+
+.containerCode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code {
+    opacity: 0.2;
+    transition: opacity 0.5s ease;
+}
+
+.code:hover {
+    opacity: 1
 }
 
 /* github */
 .githubLink {
-    position: absolute;
-    margin-left: 26vh;
-    margin-top: 34vh;
     text-decoration: none;
-}
-
-.githubText {
-    letter-spacing: 10px;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
-.githubText:hover {
-    text-decoration: underline;
 }
 
 /* gmail */
 .gmailLink {
-    position: absolute;
-    margin-left: 26vh;
-    margin-top: 45vh;
     text-decoration: none;
-}
-
-.gmailText {
-    letter-spacing: 10px;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
-.gmailText:hover {
-    text-decoration: underline;
 }
 
 /* linkedin */
 .linkedinLink {
-    position: absolute;
-    margin-left: 26vh;
-    margin-top: 56vh;
     text-decoration: none;
 }
 
-.linkedinText {
-    letter-spacing: 10px;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
+@media (max-width: 768px) {
+    .containerContact, .contactItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+    }
 
-.linkedinText:hover {
-    text-decoration: underline;
-}
+    .logo {
+        width: 35px;
+        margin-right: 10px;
+        opacity: 0.7;
+        transition: opacity 0.5s ease;
+    }
+
+    .logoText {
+        font-size: 16px;
+    }
+  }
