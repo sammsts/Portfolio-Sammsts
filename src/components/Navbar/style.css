@@ -32,3 +32,19 @@
     background-color: #DDDDDD;
     color: #333333;
   }
+
+  @media (max-width: 768px) {
+    .navbar-brand-typing {
+      animation: typingAnimation 3s steps(50, end) 0s;
+      color: #FFFFFF;
+    }
+  
+    @keyframes typingAnimation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  }
