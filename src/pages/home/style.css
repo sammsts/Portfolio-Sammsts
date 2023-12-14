@@ -1,0 +1,163 @@
+/* Profile */
+.containerProfile{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(48, 46, 46) 55%, #FFFFFF 100%);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 0px 10px 0px #483D8B;
+    padding: 1vw;
+}
+
+.containerTextProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3vw;
+}
+
+.titleProfile {
+    font-family: Garamond;
+    font-size: 8vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.textProfile {
+    font-family: Garamond;
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+}
+
+.containerBackgroundProfile {
+    display: flex;
+    margin-left: auto;
+}
+
+.img-profile {
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+    border-radius: 15px;
+}
+
+.img-profile:hover {
+    opacity: 1;
+    animation: none;
+}
+
+.img-profile:hover + .containerTextProfile .titleProfile,
+.img-profile:hover + .containerTextProfile .textProfile {
+    animation: waveAnimation 1s infinite;
+}
+
+.waveAnimation {
+    animation: waveAnimation 1s infinite;
+}
+
+@keyframes waveAnimation {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Skills */
+.containerSkills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+
+}
+
+.titleSkills {
+    font-family: Garamond;
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.containerSkillsIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    justify-content: space-between;
+    margin-top: 1vw;
+
+}
+
+i {
+    font-size: 5vw;
+}
+
+.js-icon, .nodejs-icon, .react-icon, .git-icon, .github-icon, .express-icon, .vs-icon, .html-icon, .css-icon, .postgresql-icon, .mysql-icon, .ubuntu-icon, .vs2-icon, .vsCode-icon, .github2-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.js-icon:hover, .nodejs-icon:hover, .react-icon:hover, .git-icon:hover, .github-icon:hover, .express-icon:hover, .vs-icon:hover, .html-icon:hover, .css-icon:hover, .postgresql-icon:hover, .mysql-icon:hover, .ubuntu-icon:hover, .vs2-icon:hover, .vsCode-icon:hover, .github2-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Databases */
+.containerDatabases {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+}
+
+.titleDatabases {
+    font-family: Garamond;
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.containerDatabasesIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 1vw;
+    width: 100%;
+}
+
+.postgresql-icon {
+    margin-right: 7vw;
+}
+
+/* Workstation Tools */
+.containerWorkstationTools {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+}
+
+.titleWorkstationTools {
+    font-family: Garamond;
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.containerWorkstationToolsIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 1vw;
+    width: 100%;
+}
+
+.ubuntu-icon, .vs2-icon, .vsCode-icon, .github2-icon {
+    padding-right: 7vw;
+}
