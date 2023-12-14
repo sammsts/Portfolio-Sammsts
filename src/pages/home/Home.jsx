@@ -2,12 +2,16 @@ import './../../index.css';
 import './style.css';
 import { Link } from 'react-router-dom';
 import CarouselHomeDev from '../../components/Carousel/Carousel';
+import LoadingSpinner from './../../components/Loading/Loading.jsx';
 
 const Home = () => {
   
     return (
       <div>
-        <h1 className="title">Página em desenvolvimento</h1>
+        <div className="containerTitle">
+          <h1 className="title">Página em desenvolvimento</h1>
+          <LoadingSpinner />
+        </div>
         <div className="containerCode">
           <CarouselHomeDev />
         </div>

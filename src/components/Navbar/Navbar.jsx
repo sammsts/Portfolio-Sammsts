@@ -17,7 +17,9 @@ function NavB({ isDarkMode, onDarkModeClick }) {
     <div>
       <Navbar collapseOnSelect expand="lg" style={navbarStyle}>
         <Container>
-          <Navbar.Brand href="/" className='navbar-brand-typing'>{"<"}Samuel Maciel dos Santos{"/>"}</Navbar.Brand>
+          <Navbar.Brand href="/" className='navbar-brand-typing'>
+            <span className="titleNavbar">{"<"}Samuel Maciel dos Santos{"/>"}</span>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav variant="underline" defaultActiveKey="/home">

@@ -2,9 +2,17 @@ body {
     background: linear-gradient(90deg, rgb(0, 0, 0) 70%, #7028ff 100%);
 }
 
-.title {
+.containerTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    height: 100%;
+}
+
+.title {
+    padding-right: 1vw;
     color: white;
     display: flex;
     justify-content: center;
@@ -79,6 +87,18 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        background: linear-gradient(90deg, rgb(0, 0, 0) 50%, #7028ff 100%);
+    }
+
+    .containerTitle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }    
+
     .containerContact, .contactItem {
         display: flex;
         flex-direction: column;
@@ -95,5 +115,11 @@ body {
 
     .logoText {
         font-size: 16px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    body {
+        background: linear-gradient(90deg, rgb(0, 0, 0) 20%, #7028ff 100%);
     }
   }
