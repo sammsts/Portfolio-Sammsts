@@ -9,28 +9,32 @@ import { Link } from 'react-router-dom';
 function NavB({ isDarkMode, onDarkModeClick }) {
 
   const navbarStyle = {
-    backgroundColor: '#483D8B',
-    color: '#FFFFFF',
+    backgroundColor: isDarkMode ? 'rgb(48, 46, 46)' : '#ECE1EE',
+    color: isDarkMode ? '#FFFFFF' : '#000000',
   };
+
+  // const textNavBar = {
+  //   color: isDarkMode ? '#FFFFFF' : '#000000',
+  // }
 
   return (
     <div>
-      <Navbar expand="lg" style={navbarStyle}>
+      <Navbar expand="lg" style={navbarStyle} variant={isDarkMode ? "dark" : "light"}>
         <Container>
           <Navbar.Brand href="/" className='navbar-brand-typing'>
-            <span>{"<"}Samuel Maciel dos Santos{"/>"}</span>
+            <span>{"<  "}Samuel Maciel dos Santos{"  />"}</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav variant="underline" defaultActiveKey="/home">
-              <Link to="/" className="nav-link">Home</Link>
-              <Link to="/about" className="nav-link">About</Link>
-              <Link to="/projects" className="nav-link">Projects</Link>
-            </Nav>
-          </Navbar.Collapse>
         </Container>
-        <Navbar.Collapse className='justify-content-end'>
-          <BtnDarkMode isDarkMode={isDarkMode} onClick={onDarkModeClick} />
+        <Navbar.Collapse className='justify-content-end basic-navbar-nav'>
+          <Nav variant="underline" defaultActiveKey="/home" className="NavbarItems">
+            <Link to="/" className="nav-link" >Home</Link>
+            <Link to="/about" className="nav-link" >About</Link>
+            <Link to="/projects" className="nav-link" >Projects</Link>
+          </Nav>
+          <Nav>
+            <BtnDarkMode isDarkMode={isDarkMode} onClick={onDarkModeClick} />
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     </div>

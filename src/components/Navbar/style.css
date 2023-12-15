@@ -3,7 +3,7 @@
       width: 0;
     }
     to {
-      width: 20.4%;
+      width: 27%;
     }
   }
   
@@ -13,30 +13,38 @@
     display: inline-block;
     animation: typingAnimation 3s steps(40, end) 0s forwards;
     animation-fill-mode: forwards;
-    color: #FFFFFF;
+    padding-left: 3.5vw;
+    font-family: 'Brush Script MT', 'Brush Script Std', 'cursive';
+    font-style: italic;
   }
-  
+
   .navbar {
     z-index: 1;
   }
+
+  .NavbarItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2vw;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+  }
   
+
   .nav-link {
     text-decoration: none;
-    padding: 5px 10px;
     border-radius: 5px;
-    color: #FFFFFF;
     transition: background-color color 0.3s ease;
   }
   
   .nav-link:hover {
-    background-color: #DDDDDD;
-    color: #333333;
+    color: #767676;
   }
 
   @media (max-width: 768px) {
     .navbar-brand-typing {
       animation: typingAnimation 3s steps(50, end) 0s;
-      color: #FFFFFF;
     }
   
     @keyframes typingAnimation {
@@ -46,5 +54,13 @@
       to {
         width: 100%;
       }
+    }
+
+    .NavbarItems {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 80vw 0 0;
+      font-family: 'Roboto', sans-serif;
     }
   }
