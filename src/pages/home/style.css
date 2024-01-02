@@ -120,6 +120,6 @@ body {
 
   @media (max-width: 620px) {
     body {
-        background: linear-gradient(90deg, rgb(0, 0, 0) 20%, #7028ff 100%);
+        background: linear-gradient(90deg, rgb(0, 0, 0) 55%, #7028ff 85%);
     }
   }

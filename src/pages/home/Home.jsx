@@ -2,7 +2,7 @@ import './../../index.css';
 import './style.css';
 import { Link } from 'react-router-dom';
 import CarouselHomeDev from '../../components/Carousel/Carousel';
-import LoadingSpinner from './../../components/Loading/Loading.jsx';
+import PikachuLoading from './img/pikachu_loading.gif';
 
 const Home = () => {
   
@@ -10,7 +10,7 @@ const Home = () => {
       <div>
         <div className="containerTitle">
           <h1 className="title">Página em desenvolvimento</h1>
-          <LoadingSpinner />
+          <img src={PikachuLoading} alt="Pikachu Loading" className="logo" />
         </div>
         <div className="containerCode">
           <CarouselHomeDev />
