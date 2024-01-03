@@ -51,7 +51,9 @@ const Home = ({ isDarkMode }) => {
             <img src={ImgProfile} alt="Img Profile" className="img-profile" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />
           </div>
         </div>
-        <div className="containerSkills">
+        
+        {/* SKILLS - VOU UTILIZAR ISSO EM OUTRA TELA */}
+        {/* <div className="containerSkills">
           <h2 className="titleSkills">Main Stack</h2>
           <hr />
           <div className="containerSkillsIcons">
@@ -110,7 +112,7 @@ const Home = ({ isDarkMode }) => {
             <i className={isDarkMode ? "devicon-github-original-wordmark github2-icon" : "devicon-github-original-wordmark colored github2-icon"} data-tooltip-id="Github" data-tooltip-content="Github"></i>
             <Tooltip id="Github" place="bottom" type="dark" effect="float" />
           </div>
-        </div>
+        </div> */}
       </div>
     );
   };
