@@ -43,12 +43,14 @@ const Home = ({ isDarkMode }) => {
     return (
       <div style={pageStyle}>
         <div style={containerProfileStyle} className="containerProfile">
-          <div className="containerTextProfile">
-            <h1 className={`titleProfile ${isMouseOver ? 'waveAnimation' : ''}`}>Hello.</h1>
-            <p className={`textProfile ${isMouseOver ? 'waveAnimation' : ''}`}>I'm Samuel, and...</p>
-            <p className={`textProfile ${isMouseOver ? 'waveAnimation' : ''}`}>I'm a Full Stack Developer!</p>
+          <div className="containerLeftItemsProfile">
+            <div className="containerTextProfile">
+              <h1 className={`titleProfile ${isMouseOver ? 'waveAnimation' : ''}`}>Hello.</h1>
+              <p className={`textProfile ${isMouseOver ? 'waveAnimation' : ''}`}>I'm Samuel, and...</p>
+              <p className={`textProfile ${isMouseOver ? 'waveAnimation' : ''}`}>I'm a Full Stack Developer!</p>
+            </div>
             <div>
-              <AccordionHome isDarkMode={isDarkMode} />
+              <AccordionHome isDarkMode={isDarkMode} isMouseOver={isMouseOver} />
             </div>
           </div>
           <div className="containerBackgroundProfile">

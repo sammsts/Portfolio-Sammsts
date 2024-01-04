@@ -52,7 +52,7 @@ function ModalContact({ isDarkMode }) {
           <Modal.Title>Contact</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {showAlert && <AlertWarning alertText={'Por favor, preencha todos os campos.'} />}
+          {showAlert && <AlertWarning alertText={'Please fill in all fields.'} />}
           <Form>
             <Form.Group className="mb-3" controlId="sender">
               <Form.Label>Your Name (required)</Form.Label>

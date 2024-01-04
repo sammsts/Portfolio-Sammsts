@@ -22,6 +22,12 @@
     }
 }
 
+.containerLeftItemsProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .containerTextProfile {
     display: flex;
     flex-direction: column;

@@ -42,6 +42,12 @@
     color: #767676;
   }
 
+  @media (max-width: 1300px) {
+    .navbar-brand-typing {
+      animation: typingAnimation 1s steps(40, end) 0s;
+    }
+  }
+
   @media (max-width: 768px) {
     .navbar-brand-typing {
       animation: typingAnimation 3s steps(50, end) 0s;
