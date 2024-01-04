@@ -4,6 +4,7 @@ import './style.css';
 import { useState } from 'react';
 import ImgProfile from './img/background-profile.png'
 import { Tooltip } from 'react-tooltip'
+import AccordionHome from '../../components/AccordionHome/AccordionHome.jsx';
 
 const Home = ({ isDarkMode }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -46,6 +47,9 @@ const Home = ({ isDarkMode }) => {
             <h1 className={`titleProfile ${isMouseOver ? 'waveAnimation' : ''}`}>Hello.</h1>
             <p className={`textProfile ${isMouseOver ? 'waveAnimation' : ''}`}>I'm Samuel, and...</p>
             <p className={`textProfile ${isMouseOver ? 'waveAnimation' : ''}`}>I'm a Full Stack Developer!</p>
+            <div>
+              <AccordionHome isDarkMode={isDarkMode} />
+            </div>
           </div>
           <div className="containerBackgroundProfile">
             <img src={ImgProfile} alt="Img Profile" className="img-profile" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} />

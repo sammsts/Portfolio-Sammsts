@@ -18,7 +18,7 @@ const RoutesApp = () => {
   };
 
   const footerStyle = {
-    backgroundColor: isDarkMode ? '#000000' : '#A6A6A6',
+    backgroundColor: isDarkMode ? '#000000' : '#BDB1B1',
     color: isDarkMode ? '#FFFFFF' : '#000000',
     transition: 'background-color 0.3s ease',
   };
@@ -47,7 +47,7 @@ const RoutesApp = () => {
                 {/* <i className="devicon-github-original iconsContact"></i> */}
                 <i className="iconsContact"><BiLogoGithub /></i>
               </a>
-              <i className="iconsContact"><ModalContact /></i>
+              <i className="iconsContact"><ModalContact isDarkMode={isDarkMode} /></i>
               <a href="mailto:samuelmacielsts@gmail.com" target="_blank" rel="noopener noreferrer">
                 <i className="iconsContact"><CgMail /></i>
               </a>

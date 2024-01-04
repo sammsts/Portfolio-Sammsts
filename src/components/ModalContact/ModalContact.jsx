@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import 'react-whatsapp-widget/dist/index.css';
 
-function ModalContact() {
+function ModalContact({ isDarkMode }) {
   const [show, setShow] = useState(false);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
@@ -37,11 +37,17 @@ function ModalContact() {
     window.open(whatsappLink);
   };
 
+  const modalStyle = {
+    backgroundColor: '#A6A6A6',
+    color: isDarkMode ? '#FFFFFF' : '#000000',
+    transition: 'background-color 0.3s ease',
+};
+
   return (
     <>
       <FaWhatsapp className="iconsContact" onClick={handleShow}></FaWhatsapp>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} >
         <Modal.Header closeButton>
           <Modal.Title>Contact</Modal.Title>
         </Modal.Header>
