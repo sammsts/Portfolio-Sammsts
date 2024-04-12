@@ -3,26 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.3.2",
+    "axios": "^1.6.8",
+    "primereact": "^10.5.3",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.9.1",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
-    "react-ga": "^3.3.1",
-    "react-icons": "^4.12.0",
-    "react-router-dom": "^6.18.0",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
-    "react-tooltip": "^5.25.0",
-    "react-whatsapp-widget": "^2.2.0",
+    "react-scroll-to-top": "^3.0.0",
+    "scrollreveal": "^4.0.9",
+    "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "style": "npx tailwindcss -i ./src/App.css -o ./public/bundle.css --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +49,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.24.1",
+    "tailwindcss": "^3.4.1"
   }
 }
