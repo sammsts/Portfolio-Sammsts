@@ -8,7 +8,14 @@ module.exports = {
       filename: 'bundle.css'
   },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#032127',
+      },
+      fontFamily: {
+        'abhaya-libre': ['Font Primary', 'abhaya-libre'],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
