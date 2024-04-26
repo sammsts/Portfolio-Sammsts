@@ -2,9 +2,11 @@ import './style.css';
 import React, { useState } from 'react';
 import { ReactTyped } from 'react-typed';
 import { isMobile } from 'react-device-detect';
+import CardSocial from '../../ui/components/cardsocial/CardSocial.jsx';
+import CardExperience from '../../ui/components/cardexperience/CardExperience.jsx';
 
 const Home = () => {
-  const [selectedItem, setSelectedItem] = useState('sobre');
+  const [selectedItem, setSelectedItem] = useState('Sobre');
 
   const handleItemClick = (item, id) => {
     setSelectedItem(item);
@@ -24,7 +26,7 @@ const Home = () => {
 
   return (
     <div className="bg-primary text-white min-h-screen">
-      <div className="container md:flex mx-auto py-16 px-4">
+      <div id="sobre" className="container md:flex mx-auto py-16 px-4 pt-20 md:pt-40">
         <div className="md:absolute md:grid md:grid-cols-1 flex flex-col items-center md:text-left text-center mb-10">
           <h1 className="font-abhaya-libre text-3xl md:text-6xl font-extrabold mb-2">
             <ReactTyped
@@ -39,7 +41,7 @@ const Home = () => {
           <h3 className="font-abhaya-libre text-xl md:text-2xl pb-4">
             Desenvolvedor Full Stack Jr
           </h3>
-          <p className="text-xs text-slate-400 tracking-normal pb-4">
+          <p className="text-sm text-slate-400 tracking-normal pb-4">
             Eu projeto interações digitais detalhadas, cativantes e de fácil acesso para todos os usuários.
           </p>
           <div className="w-full md:w-1/3 pt-16">
@@ -48,8 +50,8 @@ const Home = () => {
                 <div
                   key={item.label}
                   className={`cursor-pointer mb-4 ${selectedItem === item.label
-                      ? `text-white ${isMobile ? 'border-b-4' : 'md:border-l-4'} border-white md:pl-2`
-                      : 'hover:text-white hover:border-l-4 hover:border-white hover:pl-2'
+                    ? `text-white ${isMobile ? 'border-b-4' : 'md:border-l-4'} border-white md:pl-4`
+                    : 'hover:text-white hover:border-l-4 hover:border-white hover:pl-4'
                     }`}
                   onClick={() => handleItemClick(item.label, item.id)}
                 >
@@ -59,7 +61,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div id="sobre" className="flex flex-col items-center md:items-start md:flex-row md:justify-between md:flex-row-reverse">
+        <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between md:flex-row-reverse">
           <div className="mb-8 md:mb-0 md:w-2/6 md:pr-8 text-justify">
             <p className="text-slate-400 indent-8 mb-4">
               19 anos de idade, natural de <span className="text-white">Santo Ângelo - RS</span>. Sou um profissional dedicado ao máximo, trabalhando e conciliando meus estudos na <span className="text-white">universidade</span>. No decorrer de minha carreira profissional pude experienciar algumas <span className="text-white">linguagens de programação</span>, <span className="text-white">frameworks</span>, <span className="text-white">bancos de dados</span>, <span className="text-white">linguagens de marcação</span> e de <span className="text-white">estilo</span> do mercado atual.
@@ -72,6 +74,12 @@ const Home = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div id="experiencias" className="container flex justify-center mx-auto py-16 px-16 md:pt-40 md:pt-60">
+        <div><CardExperience /></div>
+      </div>
+      <div className="fixed bottom-0 left-0 w-full text-white py-4 px-6">
+        <CardSocial />
       </div>
     </div>
 
