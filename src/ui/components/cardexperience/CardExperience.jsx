@@ -6,7 +6,7 @@ const CardExperience = () => {
             <div className="cardExperience">
                 <span className="font-abhaya-libre text-xl grid justify-items-center">
                     <p className="py-5 text-sm text-slate-400 tracking-normal italic">2023 - Atualmente</p>
-                    <img src="https://www.abase.com.br/wp-content/uploads/2023/04/logo2.png" width={'128'} />
+                    <img src="https://www.abase.com.br/wp-content/uploads/2023/04/logo2.png" width={'128'} alt="Logotipo Abase"/>
                 </span>
                 <div className="card__content">
                     <p className="card__title">Card Title
@@ -16,7 +16,7 @@ const CardExperience = () => {
             <div className="cardExperience">
                 <span className="font-abhaya-libre text-xl grid justify-items-center">
                     <p className="text-sm text-slate-400 tracking-normal italic">2022 - 2023</p>
-                    <img src="https://www.gestaosolution.com.br/wp-content/uploads/2023/11/logosolution-768x274-1.webp" width={'228'} />
+                    <img src="https://www.gestaosolution.com.br/wp-content/uploads/2023/11/logosolution-768x274-1.webp" width={'228'} alt="Logotipo Solution"/>
                 </span>
                 <div className="card__content">
                     <p className="card__title">Card Title
