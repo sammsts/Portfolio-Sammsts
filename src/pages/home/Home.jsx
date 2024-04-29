@@ -1,12 +1,15 @@
 import './style.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ReactTyped } from 'react-typed';
 import { isMobile } from 'react-device-detect';
 import CardSocial from '../../ui/components/cardsocial/CardSocial.jsx';
 import CardExperience from '../../ui/components/cardexperience/CardExperience.jsx';
+import CardTrabalhos from '../../ui/components/cardtrabalhos/CardTrabalhos.jsx';
+import axios from 'axios';
 
 const Home = () => {
   const [selectedItem, setSelectedItem] = useState('Sobre');
+  const [userGithub, setUserGithub] = useState([]);
 
   const handleItemClick = (item, id) => {
     setSelectedItem(item);
@@ -24,9 +27,32 @@ const Home = () => {
     { label: 'Contato', id: 'contato' },
   ];
 
+  const user = process.env.REACT_APP_USER_GITHUB;
+  const headers = {
+    Authorization: `token ${process.env.REACT_APP_TOKEN_GITHUB}`,
+  };
+
+  const fetchDataUser = async () => {
+    const apiUrl = `https://api.github.com/users/${user}`;
+  
+    try {
+      const response = await axios.get(apiUrl, { headers });
+      return response.data;
+    } catch (error) {
+      console.error(`Erro ao buscar dados do github.`);
+      return console.error('Erro ao buscar dados do github.');
+    }
+  };
+
+  useEffect(() => {
+    const response = fetchDataUser();
+    setUserGithub(response);
+    console.log(userGithub);
+  }, []);
+
   return (
     <div className="bg-primary text-white min-h-screen">
-      <div id="sobre" className="container md:flex mx-auto py-16 px-4 pt-20 md:pt-40">
+      <div id="sobre" className="container md:flex mx-auto py-16 px-4 pt-20 md:pt-80">
         <div className="md:absolute md:grid md:grid-cols-1 flex flex-col items-center md:text-left text-center mb-10">
           <h1 className="font-abhaya-libre text-3xl md:text-6xl font-extrabold mb-2">
             <ReactTyped
@@ -75,14 +101,21 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id="experiencias" className="container flex justify-center mx-auto py-16 px-16 md:pt-40 md:pt-60">
-        <div><CardExperience /></div>
+      <div id="experiencias" className="container shadow-2xl mx-auto md:h-80 py-16 px-16 md:mt-40">
+        <div>
+          <CardExperience />
+        </div>
       </div>
+      <div id="trabalhos" className="container mx-auto py-16 px-16 md:mt-40">
+        <div>
+          <CardTrabalhos />
+        </div>
+      </div>
+
       <div className="fixed bottom-0 left-0 w-full text-white py-4 px-6">
         <CardSocial />
       </div>
     </div>
-
   );
 };
 
