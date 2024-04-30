@@ -34,21 +34,33 @@ const Home = () => {
 
   const fetchDataUser = async () => {
     const apiUrl = `https://api.github.com/users/${user}`;
-  
+
     try {
       const response = await axios.get(apiUrl, { headers });
       return response.data;
     } catch (error) {
       console.error(`Erro ao buscar dados do github.`);
-      return console.error('Erro ao buscar dados do github.');
+      throw error;
     }
   };
 
   useEffect(() => {
-    const response = fetchDataUser();
-    setUserGithub(response);
-    console.log(userGithub);
+    const fetchData = async () => {
+      try {
+        const userData = await fetchDataUser();
+        setUserGithub(userData);
+      } catch (error) {
+        console.error(`Erro ao buscar dados do github.`);
+        return console.error('Erro ao buscar dados do github.');
+      }
+    };
+
+    fetchData();
   }, []);
+
+  if (!userGithub) {
+    return console.log('Carregando dados do GitHub...');
+  }
 
   return (
     <div className="bg-primary text-white min-h-screen">

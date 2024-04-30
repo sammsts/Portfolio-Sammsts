@@ -6,7 +6,7 @@ const CardSocial = () => {
     <div className="card">
       <span><p>@</p></span>
       <a className="social-link" href="https://github.com/sammsts" target="_blank" rel="noreferrer" title="GitHub">
-        <i class="devicon-github-original colored"></i>
+        <i className="devicon-github-original colored"></i>
       </a>
       <a className="social-link" href="https://www.linkedin.com/in/samuelmacielsantos/" target="_blank" rel="noreferrer" title="LinkedIn">
         <svg viewBox="0 0 128 128">
