@@ -10,6 +10,7 @@ import axios from 'axios';
 const Home = () => {
   const [selectedItem, setSelectedItem] = useState('Sobre');
   const [userGithub, setUserGithub] = useState([]);
+  const [repoGithub, setRepoGithub] = useState([]);
 
   const handleItemClick = (item, id) => {
     setSelectedItem(item);
@@ -39,7 +40,19 @@ const Home = () => {
       const response = await axios.get(apiUrl, { headers });
       return response.data;
     } catch (error) {
-      console.error(`Erro ao buscar dados do github.`);
+      console.error(`Erro ao buscar dados de usuário do github.`);
+      throw error;
+    }
+  };
+
+  const fetchRepoData = async () => {
+    const apiUrl = `https://api.github.com/users/${user}/repos`;
+
+    try {
+      const response = await axios.get(apiUrl, { headers });
+      return response.data;
+    } catch (error) {
+      console.error(`Erro ao buscar dados de repositório do github.`);
       throw error;
     }
   };
@@ -48,7 +61,10 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const userData = await fetchDataUser();
+        const repoData = await fetchRepoData();
+        
         setUserGithub(userData);
+        setRepoGithub(repoData);
       } catch (error) {
         console.error(`Erro ao buscar dados do github.`);
         return console.error('Erro ao buscar dados do github.');
@@ -120,7 +136,7 @@ const Home = () => {
       </div>
       <div id="trabalhos" className="container mx-auto py-16 px-16 md:mt-40">
         <div>
-          <CardTrabalhos />
+          <CardTrabalhos userGithub={userGithub} repoGithub={repoGithub} />
         </div>
       </div>
 

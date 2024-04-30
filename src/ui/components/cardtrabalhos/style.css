@@ -1,9 +1,9 @@
 /* CodePen Card */
 
 .cardTrabalhos {
-    width: 15em;
-    height: 10em;
-    background: linear-gradient(270deg, #ce68d9, #45c6db, #45db79);
+    width: auto;
+    height: 11em;
+    background: linear-gradient(270deg, #135f58, #0d4030, #103044);
     background-size: 800% 800%;
     -webkit-animation: AnimationName 3s ease infinite;
     -moz-animation: AnimationName 3s ease infinite;
@@ -113,37 +113,6 @@
     transition: .2s ease-in-out;
   }
   
-  .likes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5em;
-    height: 1.4em;
-    border-radius: 4px;
-    margin-top: -0.5em;
-    opacity: 0;
-    background-color: #444857;
-    transition: .2s ease-in-out;
-  }
-  
-  .likes_text {
-    font-family: Montserrat;
-    font-size: 0.8em;
-    margin-left: 0.25em;
-    color: white;
-  }
-  
-  .likes_svg {
-    width: 12px;
-    height: 12px;
-    fill: white;
-  }
-  
-  .likes:hover {
-    background-color: #5A5F73;
-    cursor: pointer;
-  }
-  
   .comments {
     display: flex;
     align-items: center;
@@ -207,18 +176,18 @@
   }
   
   .main:hover .likes {
-    margin-top: 0.5em;
     opacity: 1;
+    z-index: 2;
   }
   
   .main:hover .comments {
-    margin-top: 0.5em;
     opacity: 1;
+    z-index: 2;
   }
   
   .main:hover .views {
-    margin-top: 0.5em;
     opacity: 1;
+    z-index: 2;
   }
   
   
