@@ -6,12 +6,12 @@ const PopUpExperience = ({ openPopUpXp, onClose }) => {
         onClose();
     }
 
-    if (openPopUpXp == 0) {
+    if (openPopUpXp === 0) {
         return (
             <div className={`modal-background`}>
                 <div className={`modalAb`}>
                     <div className="cardPopUpAb">
-                        <img src="https://www.abase.com.br/wp-content/uploads/2023/04/logo2.png" width={"80"} />
+                        <img src="https://www.abase.com.br/wp-content/uploads/2023/04/logo2.png" alt="logotipo Abase" width={"80"} />
                         <p className="cookieHeading">Desenvolvedor Full Stack Jr.</p>
                         <ul className="list-inside">
                             <li className="flex cookieDescription">Líder de um time de desenvolvimento, unidade em Santo Ângelo - RS;</li>
@@ -36,7 +36,7 @@ const PopUpExperience = ({ openPopUpXp, onClose }) => {
             <div className={`modal-background`}>
                 <div className={`modalSol`}>
                     <div className="cardPopUpSol">
-                        <img src="https://www.gestaosolution.com.br/wp-content/uploads/2023/11/logosolution-768x274-1.webp" width={"200"} />
+                        <img src="https://www.gestaosolution.com.br/wp-content/uploads/2023/11/logosolution-768x274-1.webp" alt="logotipo Solution" width={"200"} />
                         <p className="cookieHeading">Auxiliar de implantação 03/2022 - 12/2022</p>
                         <ul className="list-inside">
                             <li className="flex cookieDescription">Implantação do sistema (ERP Solution) nos clientes;</li>

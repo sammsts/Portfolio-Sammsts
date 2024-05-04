@@ -28,51 +28,46 @@ const Home = () => {
     { label: 'Contato', id: 'contato' },
   ];
 
-  const user = process.env.REACT_APP_USER_GITHUB;
-  const headers = {
-    Authorization: `token ${process.env.REACT_APP_TOKEN_GITHUB}`,
-  };
-
-  const fetchDataUser = async () => {
-    const apiUrl = `https://api.github.com/users/${user}`;
-
-    try {
-      const response = await axios.get(apiUrl, { headers });
-      return response.data;
-    } catch (error) {
-      console.error(`Erro ao buscar dados de usuário do github.`);
-      throw error;
-    }
-  };
-
-  const fetchRepoData = async () => {
-    const apiUrl = `https://api.github.com/users/${user}/repos`;
-
-    try {
-      const response = await axios.get(apiUrl, { headers });
-      return response.data;
-    } catch (error) {
-      console.error(`Erro ao buscar dados de repositório do github.`);
-      throw error;
-    }
-  };
-
   useEffect(() => {
+    const user = process.env.REACT_APP_USER_GITHUB;
+    const headers = {
+      Authorization: `token ${process.env.REACT_APP_TOKEN_GITHUB}`,
+    };
+
+    const fetchDataUser = async () => {
+      try {
+        const userData = await axios.get(`https://api.github.com/users/${user}`, { headers });
+        return userData.data;
+      } catch (error) {
+        console.error(`Erro ao buscar dados do usuário do GitHub.`);
+        return null;
+      }
+    };
+
+    const fetchRepoData = async () => {
+      try {
+        const repoData = await axios.get(`https://api.github.com/users/${user}/repos`, { headers });
+        return repoData.data;
+      } catch (error) {
+        console.error(`Erro ao buscar dados dos repositórios do GitHub.`);
+        return [];
+      }
+    };
+
     const fetchData = async () => {
       try {
         const userData = await fetchDataUser();
         const repoData = await fetchRepoData();
-        
         setUserGithub(userData);
         setRepoGithub(repoData);
       } catch (error) {
-        console.error(`Erro ao buscar dados do github.`);
-        return console.error('Erro ao buscar dados do github.');
+        console.error(`Erro ao buscar dados do GitHub.`);
       }
     };
 
     fetchData();
   }, []);
+
 
   if (!userGithub) {
     return console.log('Carregando dados do GitHub...');
@@ -139,7 +134,7 @@ const Home = () => {
           <CardTrabalhos userGithub={userGithub} repoGithub={repoGithub} />
         </div>
       </div>
-      
+
       <div className="fixed bottom-0 left-0 w-full text-white py-4 px-6">
         <CardSocial />
       </div>

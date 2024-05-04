@@ -32,7 +32,7 @@ const CardTrabalhos = (data) => {
                         <div className="card_back"></div>
                         <div className="data">
                             <div className="img">
-                                <img src={`${data.userGithub.avatar_url}`} />
+                                <img src={`${data.userGithub.avatar_url}`} alt="avatar GitHub" />
                             </div>
                             <div className="text">
                                 <div className="text_m">{repo.name}</div>
