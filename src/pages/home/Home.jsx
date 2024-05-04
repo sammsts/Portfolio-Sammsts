@@ -80,7 +80,7 @@ const Home = () => {
 
   return (
     <div className="bg-primary text-white min-h-screen">
-      <div id="sobre" className="container md:flex mx-auto py-16 px-4 pt-20 md:pt-80">
+      <div id="sobre" className="container md:flex mx-auto py-16 px-4 pt-20 md:pt-40">
         <div className="md:absolute md:grid md:grid-cols-1 flex flex-col items-center md:text-left text-center mb-10">
           <h1 className="font-abhaya-libre text-3xl md:text-6xl font-extrabold mb-2">
             <ReactTyped
@@ -134,12 +134,12 @@ const Home = () => {
           <CardExperience />
         </div>
       </div>
-      <div id="trabalhos" className="container mx-auto py-16 px-16 md:mt-40">
+      <div id="trabalhos" className="container overflow-y-scroll md:h-96 mx-auto py-16 px-16 md:mt-40">
         <div>
           <CardTrabalhos userGithub={userGithub} repoGithub={repoGithub} />
         </div>
       </div>
-
+      
       <div className="fixed bottom-0 left-0 w-full text-white py-4 px-6">
         <CardSocial />
       </div>
