@@ -111,7 +111,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between md:flex-row-reverse">
-          <div className={`shadow-2xl overflow-y-scroll ${isMobile ? 'no-scrollbar md:pr-8 text-justify' : ''}`} style={!isMobile ? { width: '40%', height: '700px', padding: '5%' } : { width: '100%', height: '700px', padding: '5%' }}>
+          <div className={`shadow-2xl overflow-y-scroll no-scrollbar md:pr-8 text-justify`} style={!isMobile ? { width: '40%', height: '700px', padding: '5%' } : { width: '100%', height: '700px', padding: '5%' }}>
             <div id="sobre">
               <p className="text-slate-400 indent-8 mb-4">
                 19 anos de idade, natural de <span className="text-white">Santo Ângelo - RS</span>. Sou um profissional dedicado ao máximo, trabalhando e conciliando meus estudos na <span className="text-white">universidade</span>. No decorrer de minha carreira profissional pude experienciar algumas <span className="text-white">linguagens de programação</span>, <span className="text-white">frameworks</span>, <span className="text-white">bancos de dados</span>, <span className="text-white">linguagens de marcação</span> e de <span className="text-white">estilo</span> do mercado atual.
