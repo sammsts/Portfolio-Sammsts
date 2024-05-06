@@ -203,7 +203,7 @@ const Home = () => {
               <CardTrabalhos userGithub={userGithub} repoGithub={repoGithub} />
             </div>
             <div className="py-3">
-              <a href="https://github.com/sammsts?tab=repositories" target="_blank">
+              <a href="https://github.com/sammsts?tab=repositories" target="_blank" rel="noreferrer">
                 <p className="flex flex-col items-center hover:cursor-pointer font-thin italic underline decoration-slate-300 hover:decoration-green-500 hover:text-green-400">Veja mais...</p>
               </a>
             </div>

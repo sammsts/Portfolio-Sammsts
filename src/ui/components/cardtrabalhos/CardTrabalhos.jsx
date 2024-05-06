@@ -10,14 +10,14 @@ const CardTrabalhos = (data) => {
                         <div key={repo.id} className="main hover:shadow-2xl px-1 py-5 mx-3 my-3">
                             <div className="relative cardTrabalhos">
                                 <div className="fl">
-                                    <a href={`${repo.homepage}`} target="_blank" className="z-10" title="Deploy">
+                                    <a href={`${repo.homepage}`} target="_blank" className="z-10" title="Deploy" rel="noreferrer">
                                         <div className="fullscreen">
                                             <img src="https://img.icons8.com/ios/50/FFFFFF/forward-arrow.png" alt="forward-arrow" />
                                         </div>
                                     </a>
                                 </div>
                                 <div className="fl">
-                                    <a href={`${repo.html_url}`} target="_blank" className="z-10" title="Repositório">
+                                    <a href={`${repo.html_url}`} target="_blank" className="z-10" title="Repositório" rel="noreferrer">
                                         <div className="fullscreen">
                                             <img width="100" height="100" src="https://img.icons8.com/material-outlined/100/FFFFFF/home--v2.png" alt="home--v2"/>
                                         </div>
