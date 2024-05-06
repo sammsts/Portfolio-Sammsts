@@ -5,6 +5,7 @@ import { isMobile } from 'react-device-detect';
 import CardSocial from '../../ui/components/cardsocial/CardSocial.jsx';
 import CardTrabalhos from '../../ui/components/cardtrabalhos/CardTrabalhos.jsx';
 import Contact from '../../ui/components/contact/Contact.jsx';
+import ScrollReveal from 'scrollreveal';
 import axios from 'axios';
 
 const Home = () => {
@@ -29,6 +30,26 @@ const Home = () => {
   ];
 
   useEffect(() => {
+    setTimeout(() => {
+      ScrollReveal().reveal('.se-1', {
+        origin: 'top',
+        distance: '10px',
+        duration: 1000,
+        delay: 220,
+        easing: 'ease-in-out',
+        reset: true,
+      });
+
+      ScrollReveal().reveal('.se-2', {
+        origin: 'top',
+        distance: '10px',
+        duration: 1000,
+        delay: 220,
+        easing: 'ease-in-out',
+        reset: true,
+      });
+    }, 300);
+    
     const user = process.env.REACT_APP_USER_GITHUB;
     const headers = {
       Authorization: `token ${process.env.REACT_APP_TOKEN_GITHUB}`,
@@ -76,7 +97,7 @@ const Home = () => {
   return (
     <div className="bg-primary text-white min-h-screen">
       <div className="container md:flex mx-auto py-16 px-4 pt-24">
-        <div className="md:absolute md:grid md:grid-cols-1 flex flex-col items-center md:text-left text-center">
+        <div className="se-1 md:absolute md:grid md:grid-cols-1 flex flex-col items-center md:text-left text-center">
           <h1 className="font-abhaya-libre text-3xl md:text-6xl font-extrabold mb-2">
             <ReactTyped
               strings={[
@@ -111,7 +132,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between md:flex-row-reverse">
-          <div className={`shadow-2xl overflow-y-scroll no-scrollbar md:pr-8 text-justify`} style={!isMobile ? { width: '40%', height: '700px', padding: '5%' } : { width: '100%', height: '700px', padding: '5%' }}>
+          <div className={`se-2 shadow-2xl overflow-y-scroll no-scrollbar md:pr-8 text-justify`} style={!isMobile ? { width: '40%', height: '700px', padding: '5%' } : { width: '100%', height: '700px', padding: '5%' }}>
             <div id="sobre">
               <p className="text-slate-400 indent-8 mb-4">
                 19 anos de idade, natural de <span className="text-white">Santo Ângelo - RS</span>. Sou um profissional dedicado ao máximo, trabalhando e conciliando meus estudos na <span className="text-white">universidade</span>. No decorrer de minha carreira profissional pude experienciar algumas <span className="text-white">linguagens de programação</span>, <span className="text-white">frameworks</span>, <span className="text-white">bancos de dados</span>, <span className="text-white">linguagens de marcação</span> e de <span className="text-white">estilo</span> do mercado atual.
@@ -178,7 +199,7 @@ const Home = () => {
               </div>
             </div>
             <hr className="w-auto mt-10 mb-10" />
-            <div id="trabalhos" className="shadow-xl h-82 md:h-72 overflow-x-scroll">
+            <div id="trabalhos" className="shadow-xl h-82 md:h-80 overflow-x-scroll">
               <CardTrabalhos userGithub={userGithub} repoGithub={repoGithub} />
             </div>
             <div className="py-3">
