@@ -13,6 +13,13 @@ const Home = () => {
   const [userGithub, setUserGithub] = useState([]);
   const [repoGithub, setRepoGithub] = useState([]);
 
+  const items = [
+    { label: 'Sobre', id: 'sobre' },
+    { label: 'Experiências', id: 'experiencias' },
+    { label: 'Trabalhos', id: 'trabalhos' },
+    { label: 'Contato', id: 'contato' },
+  ];
+
   const handleItemClick = (item, id) => {
     setSelectedItem(item);
 
@@ -22,12 +29,18 @@ const Home = () => {
     }
   };
 
-  const items = [
-    { label: 'Sobre', id: 'sobre' },
-    { label: 'Experiências', id: 'experiencias' },
-    { label: 'Trabalhos', id: 'trabalhos' },
-    { label: 'Contato', id: 'contato' },
-  ];
+  const handleScroll = () => {
+    for (const item of items) {
+      const element = document.getElementById(item.id);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          setSelectedItem(item.label);
+          break;
+        }
+      }
+    }
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -132,31 +145,22 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between md:flex-row-reverse">
-          <div className={`se-2 shadow-2xl overflow-y-scroll no-scrollbar md:pr-8 text-justify`} style={!isMobile ? { width: '40%', height: '700px', padding: '5%' } : { width: '100%', height: '700px', padding: '5%' }}>
+          <div className={`se-2 shadow-2xl overflow-y-scroll no-scrollbar md:pr-8 text-justify`} style={!isMobile ? { width: '40%', height: '700px', padding: '5%' } : { width: '100%', height: '700px', padding: '5%' }} onScroll={handleScroll}>
             <div id="sobre">
               <p className="text-slate-400 indent-8 mb-4">
-                19 anos de idade, natural de <span className="text-white">Santo Ângelo - RS</span>. Sou um profissional dedicado ao máximo, trabalhando e conciliando meus estudos na <span className="text-white">universidade</span>. No decorrer de minha carreira profissional pude experienciar algumas <span className="text-white">linguagens de programação</span>, <span className="text-white">frameworks</span>, <span className="text-white">bancos de dados</span>, <span className="text-white">linguagens de marcação</span> e de <span className="text-white">estilo</span> do mercado atual.
+                Tenho 19 anos e sou natural de <span className="text-white hover:cursor-pointer hover:underline"><a href="https://www.google.com/maps/place/santo+%C3%A2ngelo/data=!4m2!3m1!1s0x94fe9091a97f35f1:0x5f576c0ad8e18ca8?sa=X&ved=1t:155783&ictx=111" target="_blank" rel="noreferrer">Santo Ângelo - RS</a></span>. Sou um profissional dedicado, comprometido em conciliar meus estudos na <span className="text-white hover:cursor-pointer hover:underline" title="Universidade Regional Integrada do Alto Uruguai e das Missões - URI"><a href="https://san.uri.br/sites/site_novo/?graduacao=ciencia-da-computacao" target="_blank" rel="noreferrer">universidade</a></span> com o trabalho. Ao longo da minha carreira, tive a oportunidade de explorar diversas <span className="text-white">linguagens de programação</span>, <span className="text-white">frameworks</span>, <span className="text-white">bancos de dados</span> e tecnologias de <span className="text-white">marcação</span> e <span className="text-white">estilo</span> amplamente utilizadas no mercado atual.
               </p>
               <p className="text-slate-400 indent-8 mb-4">
-                Busco ampliar meus conhecimentos a todo momento, e adquirir experiências inovadoras.
+                Estou sempre em busca de expandir meus conhecimentos e adquirir experiências inovadoras.
+              </p>
+              <p className="text-slate-400 indent-8 mb-4">
+                Tenho <span className="text-white">experiência</span> em sistemas de gestão, como ERP, e já trabalhei com uma variedade de softwares, desde ferramentas de desenvolvimento até editores e construtores de ambientes residenciais. Como <span className="text-white">desenvolvedor de software</span>, desenvolvi uma sólida lógica computacional e atualmente atuo como <span className="text-white">Full Stack</span>, o que me permite estar constantemente atualizado com novas tecnologias e contribuir de forma significativa nesse campo.
               </p>
               <p className="text-slate-400 indent-8">
-                <span className="text-white">Experiência</span> com sistemas de gestão, ERP; Experiência com diversos softwares, desde voltados a área de desenvolvimento, a edição e até construtores de ambientes residenciais. Como <span className="text-white">desenvolvedor de software</span> pude expandir em enorme escala minha lógica computacional para sistemas. Atualmente como <span className="text-white">desenvolvedor Full Stack</span> estou podendo conhecer novas tecnologias e contribuir para este escopo.
+                Minha formação inclui: <span className="text-white">cursando Ciência da Computação na Universidade Regional Integrada do Alto Uruguai e das Missões - URI</span>, <span className="text-white">formação técnica em Eletrotécnica</span>, conclusão do <span className="text-white">Ensino Médio</span> e conhecimentos básicos de <span className="text-white">inglês</span>. Além disso, tenho participado de <span className="text-white">cursos extracurriculares</span>, como os oferecidos pela Udemy, para aprimorar ainda mais minhas habilidades.
               </p>
-              <div className="mt-5">
-                <ul className="list-inside text-slate-400">
-                  <li className="font-extrabold">Formações:</li>
-                  <ul className="list-disc ml-7 text-left">
-                    <li className="hover:underline decoration-blue-400">Acadêmico de Ciência da Computação (em andamento);</li>
-                    <li>Técnico em Eletrotécnica;</li>
-                    <li>Ensino Médio completo;</li>
-                    <li>Inglês básico 1 e 2;</li>
-                    <li>Cursos extracurriculares (udemy).</li>
-                  </ul>
-                </ul>
-              </div>
             </div>
-            <div id="experiencias" className="shadow-xl">
+            <div id="experiencias" className="shadow-xl mb-10">
               <div className="transition duration-500 ease-in-out rounded-lg hover:cursor-pointer hover:shadow-2xl hover:drop-shadow-2xl hover:bg-gray-800 hover:border-gray-800 mt-20 p-1">
                 <div className="flex flex-col items-center mb-4 mt-5"><img src="https://www.abase.com.br/wp-content/uploads/2023/04/logo2.png" alt="logotipo Abase" width={"80"} /></div>
                 <p className="italic text-slate-200 mb-5 text-center">Desenvolvedor Full Stack Jr 05/2023 - Atualmente</p>
@@ -198,8 +202,7 @@ const Home = () => {
                 </ul>
               </div>
             </div>
-            <hr className="w-auto mt-10 mb-10" />
-            <div id="trabalhos" className="shadow-xl h-82 md:h-80 overflow-x-scroll">
+            <div id="trabalhos" className="shadow-xl md:h-3/5 overflow-x-scroll mt-10">
               <CardTrabalhos userGithub={userGithub} repoGithub={repoGithub} />
             </div>
             <div className="py-3">
@@ -207,7 +210,7 @@ const Home = () => {
                 <p className="flex flex-col items-center hover:cursor-pointer font-thin italic underline decoration-slate-300 hover:decoration-green-500 hover:text-green-400">Veja mais...</p>
               </a>
             </div>
-            <div id="contato">
+            <div id="contato" className="mt-16">
               <Contact />
             </div>
           </div>
